@@ -4,7 +4,7 @@ import styled from 'styled-components';
 // import Cart from '../Cart';
 import Burger from './Burger';
 import ShoppingCart from './ShoppingCart';
-import Logo from '../Photos/the-cold-drip-logo.png';
+import Logo from '../Photos/cafesitotimelogo.png';
 
 const Nav = styled.nav`
     width: 100%;
@@ -31,7 +31,7 @@ function ResponsiveNav() {
             < ShoppingCart />
             <div id="logo">
             <Link to="/">
-                <img id="logo-png" src={Logo} alt="The Cold Drip Logo"></img>
+                <img id="logo-png" src={Logo} alt="Cafesito Time Logo"></img>
             </Link>
             </div>
             < Burger />

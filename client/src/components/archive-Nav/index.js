@@ -91,7 +91,7 @@ function Nav() {
     <header className="flex-row px-1">
       <div className="nav-container">
         <h1>
-          <Link to="/">The Cold Drip</Link>
+          <Link to="/">Cafesito Time</Link>
         </h1>
 
         <nav>{showNavigation()}</nav>

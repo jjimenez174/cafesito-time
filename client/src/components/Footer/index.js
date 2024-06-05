@@ -8,7 +8,7 @@ function footer(){
     if (Auth.loggedIn()) {
     return (
         <div id="footer">
-            <h4 className="wrapper"><Link id="footer-name" to="/">The Cold Drip</Link></h4>
+            <h4 className="wrapper"><Link id="footer-name" to="/">Cafesito Time</Link></h4>
             <div id="footer-container" className="wrapper">
                 
                 <ul>
@@ -105,7 +105,7 @@ function footer(){
             </div>
 
             <div className={fcc}>
-                <div id="copy">© 2021 Leon Hsu (leonhsu95) | All Rights Reserved.</div>
+                <div id="copy">© 2024 (Jessica, Jesse, Vanessa) | All Rights Reserved.</div>
             </div>
             
         </div>        
@@ -113,7 +113,7 @@ function footer(){
     else{
         return (
             <div id="footer">
-                <h4 className="wrapper"><Link id="footer-name" to="/">The Cold Drip</Link></h4>
+                <h4 className="wrapper"><Link id="footer-name" to="/">Cafesito Time</Link></h4>
                 <div id="footer-container" className="wrapper">
                     
                     <ul>
@@ -207,7 +207,7 @@ function footer(){
                 </div>
     
                 <div className={fcc}>
-                    <div id="copy">© 2021 Leon Hsu (leonhsu95) | All Rights Reserved.</div>
+                    <div id="copy">© 2024 (Jessica, Jesse, Vanessa) | All Rights Reserved.</div>
                 </div>
                 
             </div>        

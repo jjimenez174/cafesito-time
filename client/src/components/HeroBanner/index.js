@@ -2,7 +2,7 @@ import React from 'react';
 import Coffee from "../Media/frenchpress.gif";
 import Video from "../Media/coffee.mp4";
 // import Background from "../Media/background.png";
-import HomePic from "../Photos/the-cold-drip1.png"
+import HomePic from "../Photos/cafesito-2.png"
 
 
 function HeroBanner(){
@@ -12,19 +12,19 @@ function HeroBanner(){
             <div className="hero">
                 <div className="hero-left">
                     <h1 className="heading">
-                        Essence of Coffee
+                        Coffee from Acros the Globe
                     </h1>
                     <p className="subtitle">
-                        The celebration of deliciousness. <br></br>
-                        The best of coffee industry brought <br></br>together in one space.
+                        Immerse yourself <br></br>
+                        The best of exotic coffees <br></br>at your fingertips.
                     </p>
                     <div className="line">
-                        <p className="scroll-text">Scroll Down to Discover</p>
+                        <p className="scroll-text">Scroll Down to Explore</p>
                     </div>
                 </div>
 
                 <div className="hero-picture">
-                    <img src={HomePic} alt="The Cold Drip"></img>
+                    <img src={HomePic} alt="Cafesito Time"></img>
                 </div>
                 <div className="hero-right">
                     <div className="video-bg">
@@ -42,9 +42,9 @@ function HeroBanner(){
             <div className="hero">
                 <div className="hero-picture">
                     <h1 className="heading">
-                        Essence of Coffee
+                        Coffee from Across the Globe
                     </h1>
-                    <img src={HomePic} alt="The Cold Drip"></img>
+                    <img src={HomePic} alt="Cafesito Time"></img>
                 </div>
 
                 <div className="hero-right">

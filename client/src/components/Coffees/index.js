@@ -7,12 +7,12 @@ import { QUERY_PRODUCTS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import { Link } from 'react-router-dom';
 // import { AnimationWrapper } from 'react-hover-animation';
-// import Artisan from '../Photos/artisan-blend.png'
-// import Biz from '../Photos/biz-blend.png'
-// import Impressa from '../Photos/impressa-blend.png';
-// import Lavazza from '../Photos/lavazza-blend.png';
-// import Maverick from '../Photos/maverick-blend.png';
-// import Tag from '../Photos/tag-blend.png';
+// import Horiguchi from '../Photos/horiguchi.png'
+// import Sapporo from '../Photos/sapporo-kan.png'
+// import Komeda from '../Photos/Komeda.png';
+// import Precious from '../Photos/preciousmemory.png';
+// import Step from '../Photos/stepblend.png';
+// import Koffee from '../Photos/koffeemameya.png';
 import HomeProduct from '../HomeProduct';
 import spinner from '../../assets/spinner.gif';
 
@@ -60,7 +60,7 @@ function Coffees(){
     return (
         <div id="coffee-section">
             <h2 className="wrapper">Our Coffees</h2>
-            <p className="wrapper">Selection of Fragrant Aromatic Coffees from around the World</p>
+            <p className="wrapper">Selection of Exotic Coffee from All Corners of World</p>
             <div className="coffee-section-container"> 
            
 
@@ -84,47 +84,47 @@ function Coffees(){
             
             <section className="coffee-section-item">
                 <AnimationWrapper>
-                        <img src={Artisan} alt="Artisan Blend"></img>
-                        <p className="coffee-name">Artisan Blend</p>
+                        <img src={Horiguchi} alt="Horiguchi Blend"></img>
+                        <p className="coffee-name">Horiguchi Blend</p>
                 </AnimationWrapper>
             </section>
             
             <section className="coffee-section-item">
                 <AnimationWrapper>
-                        <img src={Biz} alt="Biz Blend"></img>
-                        <p className="coffee-name">Biz Blend</p>
+                        <img src={Sapporo} alt="Sapporo Blend"></img>
+                        <p className="coffee-name">Sapporo Blend</p>
                 </AnimationWrapper>
             </section>
             
             
                 <section className="coffee-section-item">
             <AnimationWrapper>
-                    <img src={Impressa} alt="Impressa Blend"></img>
-                    <p className="coffee-name">Impressa Blend</p>
+                    <img src={Komeda} alt="Komeda Blend"></img>
+                    <p className="coffee-name">Komeda Blend</p>
             </AnimationWrapper>
                 </section>
             
             
                 <section className="coffee-section-item">
             <AnimationWrapper>
-                    <img src={Lavazza} alt="Lavazza Blend"></img>
-                    <p className="coffee-name">Lavazza Blend</p>
+                    <img src={Precious} alt="Precious Blend"></img>
+                    <p className="coffee-name">Precious Blend</p>
             </AnimationWrapper>
                 </section>
             
             
                 <section className="coffee-section-item">
             <AnimationWrapper>
-                    <img src={Maverick} alt="Maverick Blend"></img>
-                    <p className="coffee-name">Maverick Blend</p>
+                    <img src={Step} alt="Step Blend"></img>
+                    <p className="coffee-name">Step Blend</p>
             </AnimationWrapper>
                 </section>
             
             
                 <section className="coffee-section-item">
             <AnimationWrapper>
-                    <img src={Tag} alt="Tag Blend"></img>
-                    <p className="coffee-name">Tag Blend</p>
+                    <img src={Koffee} alt="Koffee Blend"></img>
+                    <p className="coffee-name">Koffee Blend</p>
             </AnimationWrapper>
                 </section> */}
             
