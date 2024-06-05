@@ -8,7 +8,7 @@ function Recommendation(){
         <div className={rsclass}> 
             <div className="recommendation-section-text">
                 <h2>Recommendations</h2>
-                <p id="recommedendation-tag">Discover how you can get started to Great Coffee</p>
+                <p id="recommedendation-tag">Explore how to get started to Exotic Coffee</p>
             </div>
             <div className="recommendation-section-picture">
                 <p>Some Promo Text</p>
