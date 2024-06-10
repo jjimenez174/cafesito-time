@@ -2,139 +2,122 @@ const db = require("./connection");
 const { User, Product, Category } = require("../models");
 
 db.once("open", async () => {
-  await Category.deleteMany();
 
   const categories = await Category.insertMany([
     { name: "Coffee" },
-    { name: "Supplies" },
+    { name: "Accessories" },
   ]);
 
   console.log("categories seeded");
 
-  await Product.deleteMany();
-
   const products = await Product.insertMany([
     {
-      name: "Horiguchi Coffee - 500g",
+      name: "Brazil Coffee",
       description:
-        "Green coffee beans sourced from Yokohama, Japan.",
-      image: "horiguchi.png",
+        "Slow roasted coffee beans from Brazil with a rich bold flavour.",
+      image: "Brazil.webp",
+      price: 30,
       category: categories[0]._id,
-      price: 30.0,
-      quantity: 500,
     },
     {
-      name: "Sapporo Coffee Kan - 500g",
+      name: "Colombia Coffee",
       description:
-        "Rich, smoky coffee roasted using a rare Japanese technique called Sumiyaki (Charcoal) Coffee Roasting.",
-      image: "sapporo-kan.png",
+        "Lightly roasted coffee sourced from Colombia.",
+      image: "colombia.webp",
+      price: 25,
       category: categories[0]._id,
-      price: 31.99,
-      quantity: 500,
     },
     {
-      name: "Komeda Blend - 500g",
+      name: "Costa Rica Coffee",
       description:
-        "Azuki Coffee with sweet red bean paste integrated with the coffee.",
-      image: "Komeda.png",
+        "Medium roasted coffee beans from the tropics of Costa Rica.",
+      image: "costarica.webp",
+      price: 25,
       category: categories[0]._id,
-      price: 25.99,
-      quantity: 500,
     },
     {
-      name: "Precious Memory Blend - 1kg",
+      name: "Guatemala Coffee",
       description:
-        "Hoshiyama Café in-house coffee blend is created exclusively in Japan.",
-      image: "preciousmemory.png",
+        "Rich bold coffee flavour from the depths of Guatemala.",
+      image: "guatemala.webp",
+      price: 25,
       category: categories[0]._id,
-      price: 60.0,
-      quantity: 500,
     },
     {
-      name: "Step Blend - 250g",
+      name: "Ethiopia Coffee",
       description:
-        "Kenya Washed, Guatemala Washed, Ethiopia Washed.",
-      image: "stepblend.png",
+        "Hearty dark roasted coffee beans from Ethiopia.",
+      image: "Ethiopia.webp",
+      price: 30,
       category: categories[0]._id,
-      price: 15.99,
-      quantity: 500,
     },
     {
-      name: "Koffee Mameya - 340g",
+      name: "India Coffee",
       description:
-        "Japanese Third-wave coffee blend.",
-      image: "koffeemameya.png",
+        "Spicy coffee from India.",
+      image: "India.webp",
+      price: 30,
       category: categories[0]._id,
-      price: 17.99,
-      quantity: 500,
     },
     {
-      name: "Amanai Pot 1L - Silver",
+      name: "Sumatra Coffee",
+      description:
+        "Lightly roasted coffee with a charcoal flavor from Indonesia.",
+      image: "sumatra.webp",
+      price: 30,
+      category: categories[0]._id,
+    },
+    {
+      name: "Coffee Grinder",
+      description:
+        "Sleek, modern designed coffee grinder to suit your home.",
+      image: "coffee_grinder.jpeg",
+      price: 80,
       category: categories[1]._id,
-      description:
-        "Japanese drip pot specialized for extracting coffee. It's a good size and fits comfortably in your hand.",
-      image: "amanaipot.png",
-      price: 37.9,
-      quantity: 20,
     },
     {
-      name: "Labour and Wait Coffee Pot - 600ml",
-      category: categories[1]._id,
+      name: "Filtered Coffee",
       description:
-        "Japanese Coffee Pot in Black by Labour and Wait",
-      image: "labourandwaitpot.png",
-      price: 38.99,
-      quantity: 20,
+        "Coffee filters for a proper drip coffee experience.",
+      image: "filtered_coffee.webp",
+      price: 50,
+      category: categories[1]._id,
     },
     {
-      name: "Epeios Drip Kettle",
-      category: categories[1]._id,
+      name: "Electric Kettle",
       description:
-        "Epeios Drip Kettle in Black or White. Electric Kettle made in Japan.",
-      image: "epeioskettle.png",
-      price: 219.99,
-      quantity: 20,
+        "Electric kettle with a simple design to fit your home.",
+      image: "electric_kettle.webp",
+      price: 120,
+      category: categories[1]._id,
     },
     {
-      name: "Collar Coffee Grinder",
-      category: categories[1]._id,
+      name: "Coffee Mug",
       description:
-        "Collar Coffee Grinder by Daniel Debiasi and Federico Sandri.",
-      image: "collargrinder.png",
-      price: 489.99,
-      quantity: 20,
+        "Cute coffee mug to brighten your morning.",
+      image: "coffee_mugs.webp",
+      price: 85,
+      category: categories[1]._id,
     },
+    {
+      name: "Coffee Glass",
+      description:
+        "Fancy, sleek coffee glass to match your modern aesthetic.",
+      image: "coffee_glass.webp",
+      price: 65,
+      category: categories[1]._id,
+    },
+
   ]);
 
   console.log(products);
   console.log("products seeded");
-
-  await User.deleteMany();
 
   await User.create({
     firstName: "Jessy",
     lastName: "Castaneda",
     email: "jessyc.12@icloud.com",
     password: "admin",
-    orders: [
-      {
-        // products: [products[0]._id, products[0]._id, products[1]._id]
-      },
-    ],
-    admin: true,
-  });
-
-  await User.create({
-    firstName: "jane",
-    lastName: "doe",
-    email: "janedoe123@gmail.com",
-    password: "obUser",
-    orders: [
-      {
-        // products: [products[0]._id, products[0]._id, products[1]._id]
-      },
-    ],
-    admin: false,
   });
 
   console.log("users seeded");

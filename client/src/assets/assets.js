@@ -86,7 +86,7 @@ export const shop_list = [
     name: "Sumatra Coffee",
     image: sumatra,
     price: 30,
-    description: "Lightly roasted coffee with a charcoal flavor from Indonesia",
+    description: "Lightly roasted coffee with a charcoal flavor from Indonesia.",
     category: "Coffee"
 },
 {
