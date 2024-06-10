@@ -1,39 +1,67 @@
-import './SignIn.css'
 import { Link } from 'react-router-dom';
 import React, { useState } from "react";
+import { useMutation } from '@apollo/client';
+import { LOGIN } from '../../utils/mutations';
+import './SignIn.css'
 
 function SignIn() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, { error }] = useMutation(LOGIN);
 
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
-  };
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(`Submitted username: ${username}, password: ${password}`);
+    try {
+      const { data: { login: { token } } } = await login({
+        variables: { email: formState.email, password: formState.password },
+      });
+      Auth.login(token);
+    } catch (e) {
+      console.error('Error logging in:', e);
+    }
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
   return (
     <div id="SignIn-container" className="container">
-      <form className="SignIn-form" action="" method="post" onSubmit={handleSubmit}>
+      <form className="SignIn-form" onSubmit={handleSubmit}>
         <div className="SignIn-title">
-            <h2>Sign In</h2>
+          <h2>Sign In</h2>
         </div>
-        <input type="text" className="input" id="user_SignIn" autoComplete="off" placeholder="Username" value={username} onChange={handleUsernameChange}/>
-        <input type="password" className="input" id="user_pass" autoComplete="off" placeholder="Password" value={password} onChange={handlePasswordChange}/>
-
-        <Link to='/'><input type="submit" class="button" value="Sign In" /> </Link>
-       <Link to='/signup'> <input  type="submit" class="button" value="Sign Up" /></Link>
+        <div className='signin-inputs'>
+          <input
+            placeholder="Email"
+            name="email"
+            type="email"
+            id="email"
+            value={formState.email}
+            onChange={handleChange}
+            required
+          />
+          <input
+            placeholder="Password"
+            name="password"
+            type="password"
+            id="pwd"
+            value={formState.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button type="submit" className="button">Sign In</button>
+        {error && <p className="error-text">Error signing in</p>}
+        <Link to='/signup'>
+          <button type="button" className="button">Sign Up</button>
+        </Link>
       </form>
     </div>
   );
 }
 
 export default SignIn;
-
