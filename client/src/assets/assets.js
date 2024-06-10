@@ -38,7 +38,7 @@ export const shop_list = [
     name: "Brazil Coffee",
     image: brazil,
     price: 30,
-    description:"",
+    description:"Slow roasted coffee beans from Brazil with a rich bold flavour.",
     category: "Coffee"
 },
 {
@@ -46,7 +46,7 @@ export const shop_list = [
     name: "Colombia Coffee",
     image: colombia,
     price: 25,
-    description: "",
+    description: "Lightly roasted coffee sourced from Colombia.",
     category: "Coffee"
 },
 {
@@ -54,7 +54,7 @@ export const shop_list = [
     name: "Costa Rica Coffee",
     image: costarica,
     price: 25,
-    description: "",
+    description: "Medium roasted coffee beans from the tropics of Costa Rica.",
     category: "Coffee"
 },
 {
@@ -62,7 +62,7 @@ export const shop_list = [
     name: "Guatemala Coffee",
     image: guatemala,
     price: 25,
-    description: "",
+    description: "Rich bold coffee flavour from the depths of Guatemala.",
     category: "Coffee"
 },
 {
@@ -70,15 +70,15 @@ export const shop_list = [
     name: "Ethiopia Coffee",
     image: ethiopia,
     price: 30,
-    description: "",
+    description: "Hearty dark roasted coffee beans from Ethiopia",
     category: "Coffee"
 },
 {
     _id: "6",
-    name: "Inida Coffee",
+    name: "India Coffee",
     image: india,
     price: 30,
-    description: "",
+    description: "Spicy coffee from India",
     category: "Coffee"
 },
 {
@@ -86,7 +86,7 @@ export const shop_list = [
     name: "Sumatra Coffee",
     image: sumatra,
     price: 30,
-    description: "",
+    description: "Lightly roasted coffee with a charcoal flavor from Indonesia",
     category: "Coffee"
 },
 {
@@ -94,7 +94,7 @@ export const shop_list = [
     name: "Coffee Grinder",
     image: coffee_grinder,
     price: 80,
-    description: "",
+    description: "Sleek, modern designed coffee grinder to suit your home.",
     category: "Accessories"
 },
 {
@@ -102,7 +102,7 @@ export const shop_list = [
     name: "Filtered Coffee",
     image: filtered_coffee,
     price: 50,
-    description: "",
+    description: "Coffee filters for a proper drip coffee experience.",
     category: "Accessories"
 },
 {
@@ -110,7 +110,7 @@ export const shop_list = [
     name: "Electric Kettle",
     image: electric_kettle,
     price: 120, 
-    description: "",
+    description: "Electric kettle with a simple design to fit your home.",
     category: "Accessories"
 },
 {
@@ -118,7 +118,7 @@ export const shop_list = [
     name: "Coffee Mug",
     image: coffee_mug,
     price: 85, 
-    description: "",
+    description: "Cute coffee mug to brighten your morning.",
     category: "Accessories"
 },
 {
@@ -126,7 +126,7 @@ export const shop_list = [
     name: "Coffee Glass",
     image: coffee_glass,
     price: 65, 
-    description: "",
+    description: "Fancy, sleek coffee glass to match your modern aesthetic.",
     category: "Accessories"
 }
 ]
