@@ -1,4 +1,5 @@
 .SignIn-form{
+    place-self: center;
     width: max(23vw,330px);
     background-color: white;
     display: flex;
@@ -7,31 +8,29 @@
     padding: 25px 30px;
     border-radius: 8px;
     font-size: 14px;
-    margin-left: 40%;
 }
 .SignIn-title {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
     margin-bottom: 5px; 
-    text-align: center;
 }
-.input {
-    margin-bottom: 5px;
-    margin-left: 20px;
-    width: 100%;
+.signin-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.signin-inputs input{
+    outline: none;
+    border: 1px solid burlywood;
     padding: 10px;
-    border: 1px solid rgb(240, 225, 206);
     border-radius: 4px;
-    outline-color: saddlebrown;
-    font-size: 15px
 }
-.button {
-    margin-left: 30px;
+.button{
     border: none;
-    background-color: saddlebrown;
-    color: white;
-    padding: 8px 100px;
+    padding: 10px 30px;
     border-radius: 4px;
+    color: white;
+    background-color: saddlebrown;
+    font-size: 15px;
     cursor: pointer;
-    font-size: 15px
 }

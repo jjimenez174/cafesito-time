@@ -4,7 +4,6 @@ import { shop_list , menu_list } from "../assets/assets";
 export const StoreContext = createContext();
 
 const StoreContextProvider = (props) => {
-   const url = "http://localhost:4000"
    const currency = "$";
    const deliveryCharge = 5;
    const [cartItems,setCartItems] = useState({});
