@@ -1,22 +1,29 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import { useMutation } from '@apollo/client';
-import { LOGIN } from '../../utils/mutations';
-import './SignIn.css'
+import { useMutation } from "@apollo/client";
+import { LOGIN } from "../../utils/mutations";
+import "./SignIn.css";
+import Auth from "../../utils/auth";
 
 function SignIn() {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(formState);
     try {
-      const { data: { login: { token } } } = await login({
+      const {
+        data: {
+          login: { token },
+        },
+      } = await login({
         variables: { email: formState.email, password: formState.password },
       });
+      console.log(token, "token");
       Auth.login(token);
     } catch (e) {
-      console.error('Error logging in:', e);
+      console.error("Error logging in:", e);
     }
   };
 
@@ -34,7 +41,7 @@ function SignIn() {
         <div className="SignIn-title">
           <h2>Sign In</h2>
         </div>
-        <div className='signin-inputs'>
+        <div className="signin-inputs">
           <input
             placeholder="Email"
             name="email"
@@ -54,10 +61,14 @@ function SignIn() {
             required
           />
         </div>
-        <button type="submit" className="button">Sign In</button>
+        <button type="submit" className="button">
+          Sign In
+        </button>
         {error && <p className="error-text">Error signing in</p>}
-        <Link to='/signup'>
-          <button type="button" className="button">Sign Up</button>
+        <Link to="/signup">
+          <button type="button" className="button">
+            Sign Up
+          </button>
         </Link>
       </form>
     </div>
