@@ -2,7 +2,7 @@
 
 ## Description
 CAFESITO TIME is an ECommerce MERN Website that is dedicated to exotic world blends of coffee. This platform aims to sell a wide variety of coffee products from around the world such as different beans, blends and supplies. 
-Consumers will find a plethora of rare coffee blends and products that are not commonly accessible for personal use or to stock their own cafes. The website features coffee beans and products imported from Asian and Latino countries.
+Consumers will find a plethora of rare coffee blends and products that are not commonly accessible for personal use or to stock their own cafes. The website features coffee beans and products imported from all over the world.
 
 ## Table of Content
 
@@ -43,4 +43,4 @@ Contact us at:
 
 ## Link Deploy Application
 
-[Render]()
+[Render](https://cafesito-time.onrender.com/)
